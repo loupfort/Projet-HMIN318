@@ -143,7 +143,9 @@ private:
 ////
 
     int tailleGrille;
-    std::vector<std::vector<std::vector<GameObject*>>> cubes;
+    int hauteur;
+    //std::vector<std::vector<std::vector<GameObject*>>> cubes;
+    GameObject* cubes[16][16][16];
 
 ////
 

@@ -62,6 +62,12 @@
 
 #include <math.h>
 
+
+
+
+//////////////////////////////////////////
+//****************************************
+
 MainWidget::MainWidget(QWidget *parent) :
     QOpenGLWidget(parent),
     geometries(0),
@@ -115,15 +121,24 @@ MainWidget::MainWidget(QWidget *parent) :
 
     root->addEnfant(camera);
 
+
     //init grille
 
-    tailleGrille = 4;
+    tailleGrille = 16;
 
-    std::vector<std::vector<std::vector<GameObject*>>> cubes(tailleGrille,std::vector<std::vector<GameObject*>> (tailleGrille,std::vector<GameObject*> (tailleGrille, new GameObject())));
+    hauteur = 16;
+
+    //génération bruit de perlin
+
+ 
+
+    //////////////
+
+    //std::vector<std::vector<std::vector<GameObject*>>> cubes(tailleGrille,std::vector<std::vector<GameObject*>> (tailleGrille,std::vector<GameObject*> (hauteur, new GameObject())));
 
     for(int i=0;i<tailleGrille;i++){
         for(int j=0;j<tailleGrille;j++){
-            for(int k=0;k<tailleGrille;k++){
+            for(int k=0;k<hauteur;k++){
                 cubes[i][j][k]=new GameObject();
 
                 //cubes[i][j][k]->addComponent(cubeRenderer);
@@ -259,12 +274,12 @@ void MainWidget::initializeGL()
 
     //init grille
    
-    //GameComponent* cubeRenderer=new MeshRenderer(1.0,1.0,1.0,":/TP2_ressources/grass.png");
+    GameComponent* cubeRenderer=new MeshRenderer(1.0,1.0,1.0,":/TP2_ressources/grass.png");
 
     for(int i=0;i<tailleGrille;i++){
         for(int j=0;j<tailleGrille;j++){
-            for(int k=0;k<tailleGrille;k++){
-                GameComponent* cubeRenderer=new MeshRenderer(2.0,2.0,2.0,":/TP2_ressources/grass.png");
+            for(int k=0;k<hauteur;k++){
+                //GameComponent* cubeRenderer=new MeshRenderer(1.0,1.0,1.0,":/TP2_ressources/grass.png");
                 cubes[i][j][k]->addComponent(cubeRenderer);
             }
         }
