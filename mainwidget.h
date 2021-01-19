@@ -51,7 +51,6 @@
 #ifndef MAINWIDGET_H
 #define MAINWIDGET_H
 
-#include "geometryengine.h"
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions_3_1>
@@ -67,7 +66,7 @@
 #include "gameobject.h"
 #include "GameComponent.h"
 #include "MeshRenderer.h"
-#include "iaennemis.h"
+
 
 class GeometryEngine;
 
@@ -138,7 +137,7 @@ private:
 
     GameObject* player;
     GameObject* ennemis;
-    iaEnnemis* iaEnnemis1;
+
 
 ////
 

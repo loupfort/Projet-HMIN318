@@ -5,7 +5,6 @@
 
 #include "transform.h"
 #include "gameComponent.h"
-#include "BoundingBox.h"
 
 class GameObject
 {
@@ -28,7 +27,6 @@ public:
     Transform transform;
     Transform localTransform;
 
-    BoundingBox BB;
 
     QVector3D getPos();
     void setPos(float x,float y,float z);

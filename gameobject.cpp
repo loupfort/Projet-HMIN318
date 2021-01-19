@@ -1,6 +1,5 @@
 #include "gameobject.h"
 #include "gameComponent.h"
-#include "BoundingBox.h"
 
 GameObject::GameObject(){
 

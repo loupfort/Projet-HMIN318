@@ -53,8 +53,6 @@
 #include "GameComponent.h"
 #include "MeshRenderer.h"
 #include "iostream"
-#include "BoundingBox.h"
-#include "iaennemis.h"
 
 #include <vector>
 
